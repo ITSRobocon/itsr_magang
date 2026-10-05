@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e3a8a"/></marker>
+    <marker id="h" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11 z" fill="#fff" stroke="#334155" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="820" height="440" fill="#ffffff"/>
+  <text x="410" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1e293b">OOP di ROS2: setiap program robot adalah sebuah class</text>
+  <!-- base class -->
+  <rect x="270" y="50" width="280" height="105" rx="10" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="410" y="74" text-anchor="middle" font-size="16" font-weight="bold" fill="#3730a3">rclcpp::Node  (class induk)</text>
+  <line x1="270" y1="84" x2="550" y2="84" stroke="#4338ca"/>
+  <g font-size="14" font-family="monospace" fill="#1e293b" text-anchor="middle">
+    <text x="410" y="106">create_publisher()</text>
+    <text x="410" y="126">create_subscription()</text>
+    <text x="410" y="146">create_wall_timer()  get_logger()</text></g>
+  <!-- inheritance arrows -->
+  <path d="M230,215 L330,157" stroke="#334155" stroke-width="2" fill="none" marker-end="url(#h)"/>
+  <path d="M590,215 L490,157" stroke="#334155" stroke-width="2" fill="none" marker-end="url(#h)"/>
+  <text x="250" y="180" text-anchor="end" font-size="13" fill="#475569">inheritance</text>
+  <text x="570" y="180" font-size="13" fill="#475569">inheritance</text>
+  <!-- child 1 -->
+  <rect x="60" y="215" width="320" height="120" rx="10" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="220" y="240" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e3a8a">MotorController : public Node</text>
+  <line x1="60" y1="250" x2="380" y2="250" stroke="#1e3a8a"/>
+  <g font-size="13" font-family="monospace" fill="#1e293b">
+    <text x="75" y="272">+ MotorController()  (constructor)</text>
+    <text x="75" y="294">- speed_  (private)</text>
+    <text x="75" y="316">- cmd_callback()</text></g>
+  <!-- child 2 -->
+  <rect x="440" y="215" width="320" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="240" text-anchor="middle" font-size="16" font-weight="bold" fill="#166534">SensorReader : public Node</text>
+  <line x1="440" y1="250" x2="760" y2="250" stroke="#16a34a"/>
+  <g font-size="13" font-family="monospace" fill="#1e293b">
+    <text x="455" y="272">+ SensorReader()  (constructor)</text>
+    <text x="455" y="294">- distance_  (private)</text>
+    <text x="455" y="316">- timer_callback()</text></g>
+  <!-- topic -->
+  <path d="M600,336 L600,372 L220,372 L220,338" stroke="#1e3a8a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <rect x="345" y="358" width="130" height="28" rx="14" fill="#fef9c3" stroke="#ca8a04"/>
+  <text x="410" y="377" text-anchor="middle" font-size="13" font-family="monospace" fill="#713f12">topic: /distance</text>
+  <text x="410" y="414" text-anchor="middle" font-size="14" fill="#334155">Dua object dari class berbeda berjalan bersamaan dan saling kirim data lewat topic.</text>
+</svg>
