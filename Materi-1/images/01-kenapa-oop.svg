@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" font-family="Helvetica, Arial, sans-serif">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e3a8a"/></marker></defs>
+  <rect width="820" height="400" fill="#ffffff"/>
+  <text x="205" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#991b1b">Tanpa OOP</text>
+  <text x="615" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#166534">Dengan OOP</text>
+  <line x1="410" y1="50" x2="410" y2="380" stroke="#cbd5e1" stroke-dasharray="6 6"/>
+  <!-- left: scattered variables -->
+  <g font-size="14" font-family="monospace" fill="#7f1d1d">
+    <rect x="30" y="60" width="150" height="30" rx="6" fill="#fee2e2" stroke="#ef4444"/><text x="42" y="80">brand1 = "Toyota"</text>
+    <rect x="215" y="75" width="150" height="30" rx="6" fill="#fee2e2" stroke="#ef4444"/><text x="227" y="95">model2 = "Civic"</text>
+    <rect x="45" y="120" width="130" height="30" rx="6" fill="#fee2e2" stroke="#ef4444"/><text x="57" y="140">year1 = 2020</text>
+    <rect x="230" y="130" width="140" height="30" rx="6" fill="#fee2e2" stroke="#ef4444"/><text x="242" y="150">brand2 = "Honda"</text>
+    <rect x="30" y="180" width="155" height="30" rx="6" fill="#fee2e2" stroke="#ef4444"/><text x="42" y="200">model1 = "Corolla"</text>
+    <rect x="225" y="190" width="130" height="30" rx="6" fill="#fee2e2" stroke="#ef4444"/><text x="237" y="210">year2 = 2021</text>
+  </g>
+  <g font-size="15" fill="#334155">
+    <text x="205" y="260" text-anchor="middle">Data berserakan, tidak jelas</text>
+    <text x="205" y="282" text-anchor="middle">mana milik mobil yang mana.</text>
+    <text x="205" y="320" text-anchor="middle">100 mobil = 300 variabel!</text>
+  </g>
+  <!-- right: class + objects -->
+  <rect x="470" y="58" width="290" height="110" rx="10" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="615" y="82" text-anchor="middle" font-size="17" font-weight="bold" fill="#1e3a8a">class Car</text>
+  <line x1="470" y1="92" x2="760" y2="92" stroke="#1e3a8a"/>
+  <g font-size="14" font-family="monospace" fill="#1e293b">
+    <text x="485" y="114">string brand;  string model;</text>
+    <text x="485" y="134">int year;</text>
+    <text x="485" y="156">void startEngine();</text>
+  </g>
+  <path d="M560,170 L520,225" stroke="#1e3a8a" stroke-width="2" marker-end="url(#a)" fill="none"/>
+  <path d="M670,170 L710,225" stroke="#1e3a8a" stroke-width="2" marker-end="url(#a)" fill="none"/>
+  <rect x="430" y="230" width="170" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="515" y="252" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">car1</text>
+  <g font-size="13" font-family="monospace" fill="#14532d" text-anchor="middle">
+    <text x="515" y="274">"Toyota", "Corolla"</text><text x="515" y="294">2020</text></g>
+  <rect x="630" y="230" width="170" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="715" y="252" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">car2</text>
+  <g font-size="13" font-family="monospace" fill="#14532d" text-anchor="middle">
+    <text x="715" y="274">"Honda", "Civic"</text><text x="715" y="294">2021</text></g>
+  <g font-size="15" fill="#334155" text-anchor="middle">
+    <text x="615" y="345">Data dikelompokkan dalam satu</text>
+    <text x="615" y="367">kesatuan (object) dari satu cetakan.</text></g>
+</svg>

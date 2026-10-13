@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 340" font-family="Helvetica, Arial, sans-serif">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker></defs>
+  <rect width="820" height="340" fill="#ffffff"/>
+  <text x="410" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1e293b">Abstraction: pakai fitur tanpa perlu tahu isi dalamnya</text>
+  <!-- user -->
+  <rect x="30" y="110" width="170" height="110" rx="10" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="115" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e3a8a">Kita (pengguna)</text>
+  <text x="115" y="175" text-anchor="middle" font-size="15" font-family="monospace" fill="#1e293b">pow(2, 3);</text>
+  <text x="115" y="203" text-anchor="middle" font-size="13" fill="#475569">hasilnya 8</text>
+  <!-- interface -->
+  <path d="M200,165 L290,165" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <rect x="290" y="95" width="200" height="140" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#166534">Yang terlihat</text>
+  <text x="390" y="150" text-anchor="middle" font-size="12" fill="#475569">(interface)</text>
+  <text x="390" y="185" text-anchor="middle" font-size="15" font-family="monospace" fill="#14532d">pow(base, exp)</text>
+  <text x="390" y="212" text-anchor="middle" font-size="13" fill="#166534">cukup tahu input &amp; output</text>
+  <!-- hidden -->
+  <path d="M490,165 L580,165" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 5" fill="none" marker-end="url(#a)"/>
+  <rect x="580" y="95" width="200" height="140" rx="10" fill="#e2e8f0" stroke="#64748b" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="680" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#475569">Yang disembunyikan</text>
+  <text x="680" y="150" text-anchor="middle" font-size="12" fill="#64748b">(implementasi)</text>
+  <g font-size="12" font-family="monospace" fill="#64748b" text-anchor="middle">
+    <text x="680" y="180">_Check_return_ inline</text>
+    <text x="680" y="198">float pow(_Xx, _Yx)</text>
+    <text x="680" y="216">{ ... kode rumit ... }</text></g>
+  <rect x="30" y="268" width="750" height="52" rx="8" fill="#fefce8" stroke="#ca8a04"/>
+  <text x="405" y="292" text-anchor="middle" font-size="14" fill="#713f12">Di C++ kita juga bisa membuat abstraction sendiri lewat abstract class:</text>
+  <text x="405" y="311" text-anchor="middle" font-size="14" font-family="monospace" fill="#713f12">virtual void sound() = 0;   // "apa" ditentukan di sini, "bagaimana" oleh child</text>
+</svg>
