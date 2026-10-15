@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#1e3a8a"/></marker>
+  </defs>
+  <rect width="820" height="470" fill="#ffffff"/>
+  <text x="410" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1e293b">Dari Turtlesim ke simulasi robot</text>
+
+  <!-- ROW 1: Turtlesim -->
+  <text x="30" y="62" font-size="15" font-weight="bold" fill="#475569">Turtlesim (Materi 4)</text>
+  <rect x="30" y="75" width="170" height="60" rx="10" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="115" y="101" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e3a8a">Node kamu</text>
+  <text x="115" y="121" text-anchor="middle" font-size="12" fill="#334155">publisher + subscriber</text>
+  <rect x="330" y="75" width="180" height="60" rx="10" fill="#dcfce7" stroke="#166534" stroke-width="2"/>
+  <text x="420" y="101" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">turtlesim_node</text>
+  <text x="420" y="121" text-anchor="middle" font-size="12" fill="#334155">simulator 2D</text>
+  <path d="M200,95 L328,95" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <text x="264" y="89" text-anchor="middle" font-size="12" fill="#475569">/turtle1/cmd_vel</text>
+  <path d="M330,120 L202,120" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <text x="264" y="134" text-anchor="middle" font-size="12" fill="#475569">/turtle1/pose</text>
+
+  <line x1="30" y1="160" x2="790" y2="160" stroke="#cbd5e1" stroke-dasharray="6,5"/>
+
+  <!-- ROW 2: Simulasi -->
+  <text x="30" y="190" font-size="15" font-weight="bold" fill="#475569">Simulasi (materi berikutnya)</text>
+  <rect x="30" y="203" width="170" height="60" rx="10" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="115" y="229" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e3a8a">Node kamu</text>
+  <text x="115" y="249" text-anchor="middle" font-size="12" fill="#334155">publisher + subscriber</text>
+  <rect x="330" y="203" width="180" height="60" rx="10" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+  <text x="420" y="229" text-anchor="middle" font-size="15" font-weight="bold" fill="#854d0e">Plugin driver C++</text>
+  <text x="420" y="249" text-anchor="middle" font-size="12" fill="#334155">kontrol roda + odometri</text>
+  <rect x="640" y="203" width="150" height="60" rx="10" fill="#dcfce7" stroke="#166534" stroke-width="2"/>
+  <text x="715" y="229" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">Robot di Webots</text>
+  <text x="715" y="249" text-anchor="middle" font-size="12" fill="#334155">motor, encoder, fisika</text>
+
+  <path d="M200,223 L328,223" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <text x="264" y="217" text-anchor="middle" font-size="12" fill="#475569">/cmd_vel</text>
+  <path d="M330,248 L202,248" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <text x="264" y="262" text-anchor="middle" font-size="12" fill="#475569">/odom</text>
+  <path d="M510,223 L638,223" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <text x="574" y="217" text-anchor="middle" font-size="12" fill="#475569">perintah motor</text>
+  <path d="M640,248 L512,248" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <text x="574" y="262" text-anchor="middle" font-size="12" fill="#475569">encoder</text>
+
+  <!-- RViz -->
+  <path d="M420,263 L420,326" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <text x="432" y="300" font-size="12" fill="#475569">/tf</text>
+  <rect x="330" y="328" width="180" height="50" rx="10" fill="#fce7f3" stroke="#9d174d" stroke-width="2"/>
+  <text x="420" y="358" text-anchor="middle" font-size="15" font-weight="bold" fill="#9d174d">RViz</text>
+
+  <text x="410" y="414" text-anchor="middle" font-size="14" fill="#475569">Pola node, topic, dan callback sama. Bedanya: pose Turtlesim diberikan simulator,</text>
+  <text x="410" y="434" text-anchor="middle" font-size="14" fill="#475569">sedangkan odometri robot dihitung dari pembacaan encoder roda.</text>
+</svg>

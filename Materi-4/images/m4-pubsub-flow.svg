@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 300" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e3a8a"/></marker>
+  </defs>
+  <rect width="820" height="300" fill="#ffffff"/>
+  <text x="410" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1e293b">Alur publisher dan subscriber lewat satu topic</text>
+  <!-- publisher -->
+  <rect x="30" y="80" width="220" height="130" rx="10" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>
+  <text x="140" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e3a8a">Node: talker</text>
+  <line x1="30" y1="120" x2="250" y2="120" stroke="#1e3a8a"/>
+  <g font-size="14" font-family="monospace" fill="#1e293b" text-anchor="middle">
+    <text x="140" y="146">create_wall_timer()</text>
+    <text x="140" y="168">create_publisher()</text>
+    <text x="140" y="190">publish(msg)</text></g>
+  <!-- topic -->
+  <rect x="335" y="115" width="150" height="60" rx="30" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+  <text x="410" y="141" text-anchor="middle" font-size="15" font-weight="bold" fill="#854d0e">/topic</text>
+  <text x="410" y="161" text-anchor="middle" font-size="12" fill="#854d0e">std_msgs/msg/String</text>
+  <!-- subscriber -->
+  <rect x="570" y="80" width="220" height="130" rx="10" fill="#dcfce7" stroke="#166534" stroke-width="2"/>
+  <text x="680" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="#166534">Node: listener</text>
+  <line x1="570" y1="120" x2="790" y2="120" stroke="#166534"/>
+  <g font-size="14" font-family="monospace" fill="#1e293b" text-anchor="middle">
+    <text x="680" y="146">create_subscription()</text>
+    <text x="680" y="168">topic_callback(msg)</text>
+    <text x="680" y="190">rclcpp::spin()</text></g>
+  <!-- arrows -->
+  <path d="M250,145 L333,145" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <path d="M485,145 L568,145" stroke="#1e3a8a" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+  <text x="292" y="136" text-anchor="middle" font-size="13" fill="#475569">publish</text>
+  <text x="527" y="136" text-anchor="middle" font-size="13" fill="#475569">callback</text>
+  <text x="410" y="250" text-anchor="middle" font-size="14" fill="#475569">Nama topic dan tipe pesan harus sama di kedua sisi. Publisher tidak tahu siapa subscribernya.</text>
+</svg>

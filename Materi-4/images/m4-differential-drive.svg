@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#1e3a8a"/></marker>
+    <marker id="g" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#166534"/></marker>
+    <marker id="o" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#a16207"/></marker>
+  </defs>
+  <rect width="820" height="420" fill="#ffffff"/>
+  <text x="410" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1e293b">Differential drive: dua roda, dua kecepatan</text>
+
+  <g transform="translate(0,40)">
+    <!-- badan robot (tampak atas) -->
+    <rect x="140" y="110" width="200" height="170" rx="12" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>
+    <text x="240" y="268" text-anchor="middle" font-size="13" fill="#334155">badan robot (tampak atas)</text>
+    <!-- roda -->
+    <rect x="112" y="150" width="28" height="90" rx="5" fill="#334155"/>
+    <rect x="340" y="150" width="28" height="90" rx="5" fill="#334155"/>
+    <text x="126" y="258" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">kiri</text>
+    <text x="354" y="258" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">kanan</text>
+    <!-- kecepatan roda: kanan lebih cepat -->
+    <path d="M126,146 L126,100" stroke="#166534" stroke-width="3" fill="none" marker-end="url(#g)"/>
+    <path d="M354,146 L354,66" stroke="#166534" stroke-width="3" fill="none" marker-end="url(#g)"/>
+    <!-- v -->
+    <path d="M240,215 L240,142" stroke="#1e3a8a" stroke-width="3" fill="none" marker-end="url(#a)"/>
+    <text x="254" y="182" font-size="16" font-weight="bold" fill="#1e3a8a">v</text>
+    <!-- omega -->
+    <path d="M212,78 A34 34 0 0 1 268,78" stroke="#a16207" stroke-width="3" fill="none" marker-end="url(#o)"/>
+    <text x="240" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#a16207">ω (putar kiri)</text>
+    <!-- L -->
+    <path d="M240,305 L128,305" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M240,305 L352,305" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <text x="240" y="330" text-anchor="middle" font-size="14" fill="#475569">L = jarak antarroda</text>
+    <text x="396" y="100" font-size="13" fill="#166534">roda kanan lebih cepat</text>
+    <text x="396" y="118" font-size="13" fill="#166534">dari roda kiri → belok kiri</text>
+
+    <!-- rumus -->
+    <rect x="470" y="150" width="320" height="130" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+    <text x="630" y="176" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Kecepatan sudut roda</text>
+    <g font-size="15" font-family="monospace" fill="#1e293b">
+      <text x="490" y="208">kiri   = (v − ω·L/2) / r</text>
+      <text x="490" y="234">kanan  = (v + ω·L/2) / r</text></g>
+    <text x="490" y="262" font-size="13" fill="#475569">v maju, ω putar, r = radius roda</text>
+  </g>
+</svg>

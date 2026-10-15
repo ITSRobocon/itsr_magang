@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="Helvetica, Arial, sans-serif">
+  <rect width="820" height="470" fill="#ffffff"/>
+  <text x="410" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1e293b">Anatomi satu node ROS 2 (C++)</text>
+
+  <!-- [1] include -->
+  <rect x="30" y="50" width="380" height="50" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+  <circle cx="55" cy="75" r="14" fill="#475569"/><text x="55" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">1</text>
+  <text x="80" y="80" font-size="15" font-family="monospace" fill="#1e293b">#include ...</text>
+  <text x="430" y="80" font-size="14" fill="#334155">Header: rclcpp dan tipe pesan yang dipakai</text>
+
+  <!-- class box -->
+  <rect x="30" y="112" width="380" height="290" rx="10" fill="#eff6ff" stroke="#1e3a8a" stroke-width="2"/>
+  <circle cx="55" cy="134" r="14" fill="#1e3a8a"/><text x="55" y="139" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">2</text>
+  <text x="80" y="139" font-size="15" font-family="monospace" fill="#1e293b">class NamaNode : public rclcpp::Node</text>
+  <text x="430" y="139" font-size="14" fill="#334155">Node = class yang mewarisi rclcpp::Node</text>
+
+  <!-- [3] constructor -->
+  <rect x="50" y="158" width="340" height="104" rx="8" fill="#dbeafe" stroke="#1e3a8a"/>
+  <circle cx="72" cy="178" r="13" fill="#1e3a8a"/><text x="72" y="183" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">3</text>
+  <text x="95" y="183" font-size="14" font-family="monospace" fill="#1e293b">NamaNode() : Node("nama")</text>
+  <g font-size="13" font-family="monospace" fill="#1e293b">
+    <text x="70" y="206">declare_parameter(...)</text>
+    <text x="70" y="226">create_publisher / create_subscription</text>
+    <text x="70" y="246">create_wall_timer</text></g>
+  <text x="430" y="200" font-size="14" fill="#334155">Constructor: nama node, lalu daftarkan</text>
+  <text x="430" y="218" font-size="14" fill="#334155">parameter, publisher, subscriber, timer</text>
+
+  <!-- [4] callback -->
+  <rect x="50" y="272" width="340" height="56" rx="8" fill="#dcfce7" stroke="#166534"/>
+  <circle cx="72" cy="292" r="13" fill="#166534"/><text x="72" y="297" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">4</text>
+  <text x="95" y="297" font-size="14" font-family="monospace" fill="#1e293b">void xxx_callback(...)</text>
+  <text x="70" y="318" font-size="13" font-family="monospace" fill="#1e293b">logika node (timer / pesan masuk)</text>
+  <text x="430" y="300" font-size="14" fill="#334155">Callback: tempat logika sebenarnya</text>
+
+  <!-- [5] member -->
+  <rect x="50" y="338" width="340" height="52" rx="8" fill="#fef9c3" stroke="#a16207"/>
+  <circle cx="72" cy="358" r="13" fill="#a16207"/><text x="72" y="363" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">5</text>
+  <text x="95" y="363" font-size="14" font-family="monospace" fill="#1e293b">private: member variable</text>
+  <text x="70" y="382" font-size="13" font-family="monospace" fill="#1e293b">publisher_, subscription_, timer_, state</text>
+  <text x="430" y="366" font-size="14" fill="#334155">Member: handle ROS dan data antar-callback</text>
+
+  <!-- [6] main -->
+  <rect x="30" y="414" width="380" height="44" rx="8" fill="#fce7f3" stroke="#9d174d" stroke-width="2"/>
+  <circle cx="55" cy="436" r="14" fill="#9d174d"/><text x="55" y="441" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">6</text>
+  <text x="80" y="441" font-size="15" font-family="monospace" fill="#1e293b">main(): init → spin → shutdown</text>
+  <text x="430" y="441" font-size="14" fill="#334155">Titik masuk program</text>
+</svg>
